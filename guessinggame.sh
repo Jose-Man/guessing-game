@@ -14,12 +14,12 @@ function Compare {
   fi
 }
 
-number_of_files=$(find . -maxdepth 1 -type f | wc -l)
+number_of_files=$(ls -a | wc -l)-2
 
 gess_is_correct=1
 while  [[ $gess_is_correct -ne 0 ]] 
 do
-  echo 'Please, enter the number of files on the current folder: '
+  echo 'Please, enter the number of files and directories on the current folder (include hidden files): '
   read user_gess
   Compare $user_gess
 done
