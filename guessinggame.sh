@@ -19,7 +19,7 @@ number_of_files=$(find . -maxdepth 1 -type f | wc -l)
 gess_is_correct=1
 while  [[ $gess_is_correct -ne 0 ]] 
 do
-  echo 'Please, enter the number of files on the folder: '
+  echo 'Please, enter the number of files on the current folder: '
   read user_gess
   Compare $user_gess
 done
